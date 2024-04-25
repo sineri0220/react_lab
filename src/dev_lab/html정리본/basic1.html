@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>my-example</title> 
+    <!-- 이건 맨위 탭제목 만드는것 -->
+    <meta charset="utf-8">
+</head>
+<body>
+<h1><a href="bindex.html">HTML First example</a></h1>
+<!-- 밑은 unordered list -->
+<ul> 
+    <li><a href="b.html">basic1 start</a></li>
+    <li>introduction</li>
+    <li>hypertext</li>
+    <li>this is list</li>
+</ul>
+<!-- 밑은 ordered list , 수정해면(추가, 삭제) 번호 바뀜-->
+<ol>
+    <li>jiwoo shin</li>
+    <li>youtube</li>
+    <li>applemac</li>
+    <li>google</li>
+</ol>
+
+<h2>선행학습</h2>
+
+abcdef
+
+
+
+<!-- table 정리 -->
+<table border="2">
+    <thead>
+        <tr>
+            <th>name</th> <th>sexuality</th> <th>home</th> <th>money</th>
+        </tr>
+    </thead>
+<tbody>
+    <tr>
+        <!-- 행 병합 -->
+        <td>jo</td> <td>girl</td> <td rowspan ="2">seoul</td> <td>1000</td>
+    </tr>
+    <tr>
+        <td>laura</td> <td>girl</td>  <td>5000</td>
+        <!-- 여기서는 서울 지역에 해당하는 칸을 비워놓는게 아니라 태그도 지워야 함 -->
+    </tr>
+    <tr>
+        <td colspan="3">money</td> <td>1500</td>
+    </tr>
+</tbody>
+</table>
+
+<!-- input 정리 -->
+<form action="http://localhost/login.php">
+<p>id: <input type="text" name="id" value="default value"></p>
+<!-- default value는 페이지 들어갔을 때 자동으로 떠있는 글자를 말함 -->
+<p>password: <input type="password" name="pwd"></p>
+<p>address: <input type="text" name="address"></p>
+<!-- 여러 줄 입력받고 싶으면 textarea 이용 -->
+<p>textarea:
+    <testarea cols="50" rows="2">default value</testarea>
+</p>
+<p><input type="submit"> 
+    <!-- 자동으로 버튼에 "제출"이라는 이름이 나온다 -->
+</form>
+<!-- dropdown list 정리 dropdown list는 여러 항목중에 선택하도록 한 것 말하는것임-->
+<h2>color</h2>
+<form action="http://localhost/color.php">
+    <select>
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="yellow">yellow</option>
+    </select>
+    <input type="submit">
+</form>
+</body>
+</html>

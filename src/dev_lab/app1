@@ -1,0 +1,73 @@
+import React, {useState} from 'react';
+
+import './App.css';
+
+// const StateTutorial = () => {
+//     const [inputValue, setInputValue] = useState("pedro")
+
+//     let onChange = (event) => {
+//         const newValue = event.target.value;
+//         setInputValue(newValue);
+//     };
+// };
+function App(){
+    // const [inputValue, setInputValue] = useState("pedro")
+
+    // let onChange = (event) => {
+    //     const newValue = event.target.value;
+    //     setInputValue(newValue);
+    // };
+
+    const [number, setNumber] = useState(0);
+    const [number2, setNumber2] = useState(0);
+    const [sum, setSum] = useState(number + number2);
+    const [sub, setSub] = useState(number - number2);
+    const [multi, setMulti] = useState(number*number2);
+    const [divi, setDivi] = useState(number / number2);
+    const [operator, setOperator] = useState("");
+    const [result, setResult] = useState(0);
+
+    // function addtotal(){
+    //     setTotal(number + number2)
+    // }
+
+    function calculate(){
+        if (operator === '+'){
+            setSum(number + number2)
+        }else if (operator === '-'){
+            setSub(number - number2)
+        }else if (operator === '*'){
+            setMulti(number*number2)
+        }else if (operator === '/'){
+            setDivi(number / number2)
+        }
+        return result
+    }
+  return (
+    <div className="App">
+      <header className="App-header">
+    
+        <h1>Adding two numbers</h1>
+        <div className="Input-numbers">
+            <input type="number" value={number} onChange={e => setNumber(+e.target.value)}/>
+            <input type="text" value={operator} onChange={e => setNumber(+e.target.value)}/>
+            <input type="number" value={number2} onChange={e => setNumber2(+e.target.value)}/>
+        </div>
+        <button onClick={calculate}>Rendering</button>
+        <h2>{number}{operator}{number2}={result}</h2>
+
+        <p>
+          Edit <code>src/App.js</code> and save to reload.<br/><br/>
+          Get inputs<br/>
+          {inputValue}
+          <input type="number" name="oper"></input>
+          <input type="text" name="oper"></input>
+          <input type="number" name="second"></input>
+        </p>
+       
+      </header>
+    </div>
+  );
+}
+
+export default App;
